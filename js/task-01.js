@@ -17,13 +17,11 @@
 // Category: Technologies
 // Elements: 5
 const categories = document.body.querySelectorAll(".item");
-console.log("Categories: ", categories);
 console.log("Number of categories: ", categories.length);
 categories.forEach((category) => {
   let categoryTitle = category.querySelector("h2").textContent;
   let elements = category.querySelector("ul").children.length;
-  //   console.log("ul: ", elementsN);
-
-  console.log(`Category:  ${categoryTitle}`);
+  console.group(`Category: ${categoryTitle}`);
   console.log("Elements: ", elements);
+  console.groupEnd();
 });
