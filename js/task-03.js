@@ -23,6 +23,10 @@ const images = [
 ];
 
 const listGallery = document.querySelector(".gallery");
-const galleryItems = [];
-images.forEach((image) => {});
-console.log("galleryItems: ", galleryItems);
+const galleryItems = images
+  .map(
+    ({ url, alt }) =>
+      `<li class = 'list'><img class ='image' src = '${url}' alt = '${alt}'/>Image-${alt}</li>`
+  )
+  .join("");
+listGallery.insertAdjacentHTML("afterbegin", galleryItems);
