@@ -21,3 +21,8 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
+const listGallery = document.querySelector(".gallery");
+const galleryItems = [];
+images.forEach((image) => {});
+console.log("galleryItems: ", galleryItems);

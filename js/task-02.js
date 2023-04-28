@@ -7,7 +7,7 @@ const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatos", "Herbs", "Con
 // Добавит название ингредиента как его текстовое содержимое.
 // Добавит элементу класс item.
 // После чего вставит все <li> за одну операцию в список ul#ingredients.
-const list = document.body.querySelector("#ingredients");
+const list = document.querySelector("#ingredients");
 const listItems = [];
 ingredients.forEach((ingredient) => {
   const listItem = document.createElement("li");
