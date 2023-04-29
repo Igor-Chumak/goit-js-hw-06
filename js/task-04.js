@@ -11,18 +11,38 @@
 // Обновляй интерфейс новым значением переменной counterValue.
 
 let counterValue = 0;
+let stepValue = 1;
 const decrementBtn = document.querySelector('button[data-action = "decrement"]');
 const incrementBtn = document.querySelector('button[data-action = "increment"]');
-const counterValueSpan = document.querySelector("#value");
+// const counterValueSpan = document.querySelector("#value");
+const counterValueSpan = document.getElementById("value");
 
-decrementBtn.addEventListener("click", () => {
-  counterValue -= 1;
+// ver 2
+const btnClick = (stepValue) => {
+  counterValue += stepValue;
+  console.log(
+    `Button ${stepValue > 0 ? "+ increment" : "- decrement"} was clicked, counter = ${counterValue}`
+  );
   counterValueSpan.textContent = counterValue;
-  //   console.log(`Button - decrement was clicked, counter = ${counterValue}`);
+  // counterValueSpan.innerHTML = counterValue;
+};
+
+decrementBtn.addEventListener("click", function () {
+  btnClick(-stepValue);
+});
+incrementBtn.addEventListener("click", function () {
+  btnClick(stepValue);
 });
 
-incrementBtn.addEventListener("click", () => {
-  counterValue += 1;
-  counterValueSpan.textContent = counterValue;
-  //   console.log(`Button + increment was clicked, counter = ${counterValue}`);
-});
+// ver 1
+// decrementBtn.addEventListener("click", () => {
+//   counterValue -= 1;
+//   counterValueSpan.textContent = counterValue;
+//   //   console.log(`Button - decrement was clicked, counter = ${counterValue}`);
+// });
+
+// incrementBtn.addEventListener("click", () => {
+//   counterValue += 1;
+//   counterValueSpan.textContent = counterValue;
+//   //   console.log(`Button + increment was clicked, counter = ${counterValue}`);
+// });
