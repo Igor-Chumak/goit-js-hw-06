@@ -2,10 +2,14 @@
 
 // <input type="text" id="name-input" placeholder="Please enter your name" />
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
-const inputName = () => {};
+
+const inputName = (event) => {
+  console.log("event: ", event);
+  //   console.log("currentTarget.value: ", event.currentTarget.value);
+  nameRef.textContent = event.currentTarget.value === "" ? "Anonymous" : event.currentTarget.value;
+};
 
 const inputRef = document.querySelector("#name-input");
 const nameRef = document.querySelector("#name-output");
-// console.log(inputRef);
 
 inputRef.addEventListener("input", inputName);
