@@ -12,8 +12,6 @@ const spanText = document.querySelector("#text");
 
 inputRef.addEventListener("change", inputChange);
 
-// console.log(`${inputRef} --- ${spanText}`);
-
 function inputChange(event) {
   spanText.style.fontSize = event.currentTarget.value + "px";
   //   console.log(`${event.type} --- ${event.currentTarget.value + "px"}`);
