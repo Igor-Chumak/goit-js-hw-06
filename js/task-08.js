@@ -21,14 +21,18 @@
 const formRef = document.querySelector(".login-form");
 formRef.addEventListener("submit", handleSubmit);
 
-// console.log(`${formRef} --- ${formRef}`);
-// console.log("formRef", ": ", formRef);
-// chigorv@ukr.net
 function handleSubmit(event) {
   event.preventDefault();
+
   const {
-    elements: { username, password },
+    elements: { email, password },
   } = event.currentTarget;
-  console.log(username.value, " - ", password.value);
-  console.log(event.currentTarget);
+
+  if (email.value === "" || password.value === "") {
+    alert("Please fill in all the fields!");
+    return;
+  }
+  console.log({ email: email.value, password: password.value });
+
+  event.currentTarget.reset();
 }
