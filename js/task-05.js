@@ -4,7 +4,6 @@
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
 const inputName = (event) => {
-  console.log("event: ", event);
   //   console.log("currentTarget.value: ", event.currentTarget.value);
   nameRef.textContent = event.currentTarget.value === "" ? "Anonymous" : event.currentTarget.value;
 };
