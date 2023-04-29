@@ -26,5 +26,9 @@ formRef.addEventListener("submit", handleSubmit);
 // chigorv@ukr.net
 function handleSubmit(event) {
   event.preventDefault();
-  console.log("submit");
+  const {
+    elements: { username, password },
+  } = event.currentTarget;
+  console.log(username.value, " - ", password.value);
+  console.log(event.currentTarget);
 }
