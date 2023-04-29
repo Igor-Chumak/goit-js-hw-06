@@ -2,10 +2,10 @@
 
 // <input type="text" id="name-input" placeholder="Please enter your name" />
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
-inputName() => {
-    
-};
+const inputName = () => {};
 
-const input = document.querySelector("#name-input");
+const inputRef = document.querySelector("#name-input");
+const nameRef = document.querySelector("#name-output");
+// console.log(inputRef);
 
-input.addEventListener("input", inputName);
+inputRef.addEventListener("input", inputName);
