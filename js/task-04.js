@@ -14,8 +14,8 @@ let counterValue = 0;
 let stepValue = 1;
 const decrementBtn = document.querySelector('button[data-action = "decrement"]');
 const incrementBtn = document.querySelector('button[data-action = "increment"]');
-// const counterValueSpan = document.querySelector("#value");
-const counterValueSpan = document.getElementById("value");
+const counterValueSpan = document.querySelector("#value");
+// const counterValueSpan = document.getElementById("value");
 
 // ver 2
 const btnClick = (stepValue) => {
@@ -24,7 +24,6 @@ const btnClick = (stepValue) => {
     `Button ${stepValue > 0 ? "+ increment" : "- decrement"} was clicked, counter = ${counterValue}`
   );
   counterValueSpan.textContent = counterValue;
-  // counterValueSpan.innerHTML = counterValue;
 };
 
 decrementBtn.addEventListener("click", function () {
