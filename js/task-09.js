@@ -13,12 +13,19 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+function btnClick(event) {
+  console.log("click");
+  // bodyRef.style.backgroundColor = "teal";
+}
+
 //
 const bodyRef = document.body;
 const btnRef = document.querySelector(".change-color");
+btnRef.addEventListener("click", btnClick);
 
 // ok
-// bodyRef.style.backgroundColor = "teal";
+//
+//
 // logs
 // console.log(`${formRef} --- ${formRef}`);
 // console.log("btnRef", ": ", btnRef);
