@@ -15,7 +15,10 @@
 
 function createBoxes(amount) {
   console.log("Create:", amount, " boxes");
-  // .insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+  divBoxesRef.insertAdjacentHTML("beforeend", `<div style='color: red'>1</div>`);
+  divBoxesRef.style.color = "yellow";
+  divBoxesRef.heigh = "30px";
+  divBoxesRef.insertAdjacentHTML("beforeend", `<div style='color: blue'>2</div>`);
 }
 
 // 3. Все элементы должены иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
