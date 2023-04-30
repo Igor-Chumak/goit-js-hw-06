@@ -15,17 +15,14 @@
 
 function createBoxes(amount) {
   console.log("Create:", amount, " boxes");
-  // divBoxesRef.style.color = "yellow";
-  // divBoxesRef.style.height = "30px";
-  divBoxesRef.insertAdjacentHTML(
-    "beforeend",
-    `<div style='background-color: red; height: 30px; width: 30px'>1</div>`
-  );
-
-  divBoxesRef.insertAdjacentHTML(
-    "beforeend",
-    `<div style='background-color: blue; height: 40px; width: 40px'>2</div>`
-  );
+  for (let index = 0; index < amount; index += 1) {
+    let currentSizeBox = SIZE_BOX + index * STEP_SIZE_BOX;
+    divBoxesRef.insertAdjacentHTML(
+      "beforeend",
+      `<div style='background-color: ${getRandomHexColor()}; height: ${currentSizeBox}px; width: ${currentSizeBox}px'></div>`
+    );
+  }
+  inputREf.value = "";
 }
 
 // 3. Все элементы должены иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
@@ -46,6 +43,8 @@ function destroyBoxes() {
   }
 }
 
+const SIZE_BOX = 30;
+const STEP_SIZE_BOX = 10;
 const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
 const inputREf = document.querySelector("input");
@@ -56,6 +55,3 @@ btnCreate.addEventListener("click", () => {
 });
 
 btnDestroy.addEventListener("click", destroyBoxes);
-
-// console.log(`${formRef} --- ${formRef}`);
-// console.log("inputREf", ": ", inputREf);
