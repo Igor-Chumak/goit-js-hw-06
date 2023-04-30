@@ -29,19 +29,20 @@ function getRandomHexColor() {
 
 function destroyBoxes() {
   console.log("Destroy");
+  inputREf.value = "";
 }
 //
 
 const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
+const inputREf = document.querySelector("input");
 
-btnCreate.addEventListener("click", (event) => {
-  console.log("Value:", event.currentTarget);
-  createBoxes(event.currentTarget.value);
+btnCreate.addEventListener("click", () => {
+  createBoxes(inputREf.value);
 });
 
 btnDestroy.addEventListener("click", destroyBoxes);
 
 // console.log(`${formRef} --- ${formRef}`);
-// console.log("btnCreate", ": ", btnCreate);
+// console.log("inputREf", ": ", inputREf);
 // console.log("btnDestroy", ": ", btnDestroy);
