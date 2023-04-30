@@ -13,15 +13,19 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-function btnClick(event) {
-  console.log("click");
-  // bodyRef.style.backgroundColor = "teal";
+function handleClick(event) {
+  let backgroundColor = getRandomHexColor();
+  // console.log("backgroundColor:", backgroundColor);
+  spanRef.textContent = backgroundColor;
+  bodyRef.style.backgroundColor = backgroundColor;
 }
 
 //
 const bodyRef = document.body;
 const btnRef = document.querySelector(".change-color");
-btnRef.addEventListener("click", btnClick);
+const spanRef = document.querySelector(".color");
+
+btnRef.addEventListener("click", handleClick);
 
 // ok
 //
