@@ -15,10 +15,17 @@
 
 function createBoxes(amount) {
   console.log("Create:", amount, " boxes");
-  divBoxesRef.insertAdjacentHTML("beforeend", `<div style='color: red'>1</div>`);
-  divBoxesRef.style.color = "yellow";
-  divBoxesRef.heigh = "30px";
-  divBoxesRef.insertAdjacentHTML("beforeend", `<div style='color: blue'>2</div>`);
+  // divBoxesRef.style.color = "yellow";
+  // divBoxesRef.style.height = "30px";
+  divBoxesRef.insertAdjacentHTML(
+    "beforeend",
+    `<div style='background-color: red; height: 30px; width: 30px'>1</div>`
+  );
+
+  divBoxesRef.insertAdjacentHTML(
+    "beforeend",
+    `<div style='background-color: blue; height: 40px; width: 40px'>2</div>`
+  );
 }
 
 // 3. Все элементы должены иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
@@ -34,8 +41,10 @@ function getRandomHexColor() {
 function destroyBoxes() {
   console.log("Destroy");
   inputREf.value = "";
+  while (divBoxesRef.firstChild) {
+    divBoxesRef.removeChild(divBoxesRef.firstChild);
+  }
 }
-//
 
 const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
