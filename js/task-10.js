@@ -15,6 +15,7 @@
 
 function createBoxes(amount) {
   console.log("Create:", amount, " boxes");
+  // .insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
 }
 
 // 3. Все элементы должены иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
@@ -36,6 +37,7 @@ function destroyBoxes() {
 const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
 const inputREf = document.querySelector("input");
+const divBoxesRef = document.querySelector("#boxes");
 
 btnCreate.addEventListener("click", () => {
   createBoxes(inputREf.value);
@@ -45,4 +47,3 @@ btnDestroy.addEventListener("click", destroyBoxes);
 
 // console.log(`${formRef} --- ${formRef}`);
 // console.log("inputREf", ": ", inputREf);
-// console.log("btnDestroy", ": ", btnDestroy);
