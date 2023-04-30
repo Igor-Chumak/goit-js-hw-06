@@ -12,5 +12,13 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+//
+const bodyRef = document.body;
+const btnRef = document.querySelector(".change-color");
+
+// ok
+// bodyRef.style.backgroundColor = "teal";
+// logs
 // console.log(`${formRef} --- ${formRef}`);
-// console.log("formRef", ": ", formRef);
+// console.log("btnRef", ": ", btnRef);
