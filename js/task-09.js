@@ -15,7 +15,6 @@ function getRandomHexColor() {
 
 function handleClick(event) {
   let backgroundColor = getRandomHexColor();
-  // console.log("backgroundColor:", backgroundColor);
   spanRef.textContent = backgroundColor;
   bodyRef.style.backgroundColor = backgroundColor;
 }
@@ -26,10 +25,3 @@ const btnRef = document.querySelector(".change-color");
 const spanRef = document.querySelector(".color");
 
 btnRef.addEventListener("click", handleClick);
-
-// ok
-//
-//
-// logs
-// console.log(`${formRef} --- ${formRef}`);
-// console.log("btnRef", ": ", btnRef);
