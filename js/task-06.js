@@ -24,7 +24,6 @@
 // }
 
 const inputBlur = (event) => {
-  //   console.log(`textInput.blur !!! ${event.currentTarget.value.length}`);
   textInput.classList.remove("valid");
   textInput.classList.remove("invalid");
   textInput.classList.add(
