@@ -7,7 +7,7 @@ const btnClick = (stepValue) => {
   counterValue += stepValue;
   // console.log(
   //   `Button ${stepValue > 0 ? "+ increment" : "- decrement"} was clicked, counter = ${counterValue}`
-  );
+  // );
   counterValueSpan.textContent = counterValue;
 };
 
